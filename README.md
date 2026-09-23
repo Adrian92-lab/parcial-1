@@ -17,8 +17,6 @@ java -cp src/main/java Main
 El programa pedirá por consola los datos de libro2 
 (título, autor, número de ejemplares y número de ejemplares prestados).
 
-1) Diagrama UML de clases (0.5)
-https://claude.ai/chat/diagrama_uml.png
 
 
 LibroTexto hereda de Libro.
