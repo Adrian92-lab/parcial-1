@@ -4,7 +4,7 @@ public class Libro {
     private int numEjemplares;
     private int numPrestados;
 
-    // Constructor por defecto
+    
     public Libro() {
         this.titulo = "";
         this.autor = "";
@@ -12,7 +12,7 @@ public class Libro {
         this.numPrestados = 0;
     }
 
-    // Constructor con parámetros
+    
     public Libro(String titulo, String autor, int numEjemplares, int numPrestados) {
         this.titulo = titulo;
         this.autor = autor;
@@ -20,7 +20,7 @@ public class Libro {
         this.numPrestados = numPrestados;
     }
 
-    // Métodos Get y Set
+    
     public String getTitulo() { return titulo; }
     public void setTitulo(String titulo) { this.titulo = titulo; }
     public String getAutor() { return autor; }
@@ -30,7 +30,7 @@ public class Libro {
     public int getNumPrestados() { return numPrestados; }
     public void setNumPrestados(int numPrestados) { this.numPrestados = numPrestados; }
 
-    // Método préstamo
+    
     public boolean prestamo() {
         if (numPrestados < numEjemplares) {
             numPrestados++;
@@ -39,7 +39,7 @@ public class Libro {
         return false;
     }
 
-    // Método devolución
+    
     public boolean devolucion() {
         if (numPrestados > 0) {
             numPrestados--;
