@@ -1,3 +1,4 @@
+Sebastian-charrupi
 Parcial-1---Sistema de Gestion de Biblioteca (Programacion 2 -G411)
 
 POO: Abstraccion, Encapasulamiento y herencia, con estructura Maven.
@@ -95,3 +96,6 @@ parcial-1/
     ├── LibroTextoUNIAC.java
     ├── Novela.java
     └── Main.java
+=======
+## Adrian Adrade Ramirez, Juan Sebastian Charrupi Diaz
+ main
