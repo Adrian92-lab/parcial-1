@@ -1,23 +1,26 @@
 public class Libro {
-    
+
     private String titulo;
     private String autor;
-    private int numeroEjemplares;
-    private int numeroEjemplaresPrestados;
-
-   
-    public Libro() {
-    }
+    private int numEjemplares;
+    private int numEjemplaresPrestados;
 
     
-    public Libro(String titulo, String autor, int numeroEjemplares, int numeroEjemplaresPrestados) {
+    public Libro() {
+        this.titulo = "";
+        this.autor = "";
+        this.numEjemplares = 0;
+        this.numEjemplaresPrestados = 0;
+    }
+
+
+    public Libro(String titulo, String autor, int numEjemplares, int numEjemplaresPrestados) {
         this.titulo = titulo;
         this.autor = autor;
-        this.numeroEjemplares = numeroEjemplares;
-        this.numeroEjemplaresPrestados = numeroEjemplaresPrestados;
+        this.numEjemplares = numEjemplares;
+        this.numEjemplaresPrestados = numEjemplaresPrestados;
     }
 
-    
     public String getTitulo() {
         return titulo;
     }
@@ -34,51 +37,47 @@ public class Libro {
         this.autor = autor;
     }
 
-    public int getNumeroEjemplares() {
-        return numeroEjemplares;
+    public int getNumEjemplares() {
+        return numEjemplares;
     }
 
-    public void setNumeroEjemplares(int numeroEjemplares) {
-        this.numeroEjemplares = numeroEjemplares;
+    public void setNumEjemplares(int numEjemplares) {
+        this.numEjemplares = numEjemplares;
     }
 
-    public int getNumeroEjemplaresPrestados() {
-        return numeroEjemplaresPrestados;
+    public int getNumEjemplaresPrestados() {
+        return numEjemplaresPrestados;
     }
 
-    public void setNumeroEjemplaresPrestados(int numeroEjemplaresPrestados) {
-        this.numeroEjemplaresPrestados = numeroEjemplaresPrestados;
+    public void setNumEjemplaresPrestados(int numEjemplaresPrestados) {
+        this.numEjemplaresPrestados = numEjemplaresPrestados;
     }
 
     
     public boolean prestamo() {
-        
-        if (numeroEjemplaresPrestados < numeroEjemplares) {
-            numeroEjemplaresPrestados++; 
+        if (numEjemplaresPrestados < numEjemplares) {
+            numEjemplaresPrestados++;
             return true;
         }
-        return false; 
+        return false;
     }
 
     
     public boolean devolucion() {
-        
-        if (numeroEjemplaresPrestados > 0) {
-            
-            numeroEjemplaresPrestados--; 
-            return true; 
+        if (numEjemplaresPrestados > 0) {
+            numEjemplaresPrestados--;
+            return true;
         }
-        return false; 
+        return false;
     }
 
-    
     @Override
     public String toString() {
         return "Libro [" +
-               "Título='" + titulo + '\'' +
-               ", Autor='" + autor + '\'' +
-               ", Ejemplares Totales=" + numeroEjemplares +
-               ", Ejemplares Prestados=" + numeroEjemplaresPrestados +
-               ']';
+                "Titulo='" + titulo + '\'' +
+                ", Autor='" + autor + '\'' +
+                ", Ejemplares Totales=" + numEjemplares +
+                ", Ejemplares Prestados=" + numEjemplaresPrestados +
+                ']';
     }
 }
