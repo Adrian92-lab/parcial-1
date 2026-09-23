@@ -58,12 +58,7 @@ public class Libro {
         this.numEjemplaresPrestados = numEjemplaresPrestados;
     }
 
-    // ---------- Metodos de negocio ----------
-
-    /**
-     * Registra el prestamo de un ejemplar.
-     * @return true si habia ejemplares disponibles y se pudo prestar, false si no.
-     */
+    
     public boolean prestamo() {
         if (numEjemplaresPrestados < numEjemplares) {
             numEjemplaresPrestados++;
